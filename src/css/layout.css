@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+}
+
+input {
+    width: 30px;
+}
+
+    input:read-only {
+        background-color: white;
+    }
+
+textarea {
+    width: 300px;
+    height: 60px;
+    resize: none;
+}
+
+.canter {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.border {
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+
+#test {
+    width: 1000px;
+    height: 30px;
+}
+
+#main {
+    width: 1000px;
+    height: 500px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#status {
+    width: 400px;
+    height: 500px;
+}
+
+#active {
+    width: 600px;
+    height: 500px;
+}
+
+#robot {
+    margin: 5px;
+    width: 390px;
+    height: 390px;
+}
+
+#pump {
+    margin: 5px;
+    width: 390px;
+    height: 190px;
+}
+
+#contents {
+    margin: 5px;
+    width: 590px;
+    height: 490px;
+}
+
+#title {
+    width: 588px;
+    height: 44px;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+#controller {
+    width: 588px;
+    height: 444px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

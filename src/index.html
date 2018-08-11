@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="css/layout.css">
+    <link rel="stylesheet" type="text/css" href="css/controller.css">
+    <script type="text/javascript" src="js/view.js"></script>
+    <title>RobotView</title>
+</head>
+<body>
+    <div id="test">
+        切り替えテスト用<button id="test_button">select</button>
+    </div>
+    <div id="main">
+        <div id="status" class="canter">
+            <div id="robot" class="border">
+                <div>速度</div>
+                <div>　<input type="text" readonly />cm/s</div>
+                <div>タイヤ</div>
+                <div>　右前輪<input type="text" readonly />度</div>
+                <div>　左前輪<input type="text" readonly />度</div>
+                <div>　右後輪<input type="text" readonly />度</div>
+                <div>　左後輪<input type="text" readonly />度</div>
+
+                <div>チューブ</div>
+                <div>　右<input type="text" readonly />度</div>
+                <div>　左<input type="text" readonly />度</div>
+            </div>
+            <div id="pump" class="border">
+                <div>ポンプ</div>
+                <div>　<input type="text" readonly />Hz</div>
+                <div>メッセージ</div>
+                <div>　<textarea readonly></textarea></div>
+            </div>
+        </div>
+        <div id="active" class="canter">
+            <div id="contents" class="border">
+                <div id="title"></div>
+                <div id="controller">
+
+                    <div id="ps_controller">
+                        <div id="right_button">
+                            <div class="right button_border">○<div id="label_maru" class=" button_label"></div></div>
+                            <div class="buttom button_border">×<div id="label_batsu" class=" button_label"></div></div>
+                            <div class="left button_border">□<div id="label_sikaku" class=" button_label"></div></div>
+                            <div class="top button_border">△<div id="label_sankaku" class=" button_label"></div></div>
+                        </div>
+
+                        <div id="left_button">
+                            <div class="right button_border">→<div id="label_right" class=" button_label"></div></div>
+                            <div class="buttom button_border">↓<div id="label_down" class=" button_label"></div></div>
+                            <div class="left button_border">←<div id="label_left" class=" button_label"></div></div>
+                            <div class="top button_border">↑<div id="label_up" class=" button_label"></div></div>
+                        </div>
+
+                        <div id="front_button">
+                            <div id="R1" class="button_border">R1<div id="label_r1" class=" button_label"></div></div>
+                            <div id="R2" class="button_border">R2<div id="label_r2" class=" button_label"></div></div>
+                            <div id="L1" class="button_border">L1<div id="label_l1" class=" button_label"></div></div>
+                            <div id="L2" class="button_border">L2<div id="label_l2" class=" button_label"></div></div>
+                        </div>
+
+                        <div id="center_button">
+                            <div id="select" class="button_border">select<div id="label_select" class=" button_label"></div></div>
+                            <div id="start" class="button_border">start<div id="label_start" class=" button_label"></div></div>
+                        </div>
+
+                        <div id="joy_stick">
+                            <div id="joy_right"><div class="stick_size">○</div><div id="label_stick_right" class=" button_label"></div></div>
+                            <div id="joy_left"><div class="stick_size">○</div><div id="label_stick_left" class=" button_label"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
