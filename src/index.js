@@ -42,15 +42,23 @@ app.on("window-all-closed", () => {
  **************************************/
 const { ipcMain } = require("electron")
 const child_process = require("child_process")
-// ‰æ‘œo—Íˆ—
-ipcMain.on("client", (event, table) => {
-    let child = child_process.execFile("python", ["src/py/client.py"], (error, stdout, stderr) => {
+// ’ÊMˆ—
+ipcMain.on("client", (event) => {
+    let proc = child_process.spawn("python", ["src/py/client.py"]);
+    proc.stdout.on("data", (data) => {
+        console.log(data.toString());
+    });
+    proc.stderr.on("data", (data) => {
+        console.log(data.toString());
+    });
+});
 
-        if (error) {
-            console.error("stderr", stderr);
-            throw error;
-        }
-        console.log(stdout);
-        console.log("pid: " + child.pid);
+ipcMain.on("server", (event) => {
+    let proc = child_process.spawn("python", ["src/py/server.py"]);
+    proc.stdout.on("data", (data) => {
+        console.log(data.toString());
+    });
+    proc.stderr.on("data", (data) => {
+        console.log(data.toString());
     });
 });

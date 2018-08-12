@@ -8,22 +8,29 @@
 </head>
 <body>
     <div id="test">
-        切り替えテスト用<button id="test_button">select</button>
+        切替テスト用<button id="select_button">select</button>
+        クライアントテスト用<button id="client_button">client</button>
+        サーバーテスト用<button id="server_button">server</button>
     </div>
     <div id="main">
-        <div id="status" class="canter">
+        <div id="status" class="center">
             <div id="robot" class="border">
-                <div>速度</div>
-                <div>　<input type="text" readonly />cm/s</div>
-                <div>タイヤ</div>
-                <div>　右前輪<input type="text" readonly />度</div>
-                <div>　左前輪<input type="text" readonly />度</div>
-                <div>　右後輪<input type="text" readonly />度</div>
-                <div>　左後輪<input type="text" readonly />度</div>
+                <div id="parameter">
+                    <div>速度</div>
+                    <div>　<input type="text" readonly />cm/s</div>
+                    <div>タイヤ</div>
+                    <div>　右前輪<input type="text" readonly />度</div>
+                    <div>　左前輪<input type="text" readonly />度</div>
+                    <div>　右後輪<input type="text" readonly />度</div>
+                    <div>　左後輪<input type="text" readonly />度</div>
 
-                <div>チューブ</div>
-                <div>　右<input type="text" readonly />度</div>
-                <div>　左<input type="text" readonly />度</div>
+                    <div>チューブ</div>
+                    <div>　右<input type="text" readonly />度</div>
+                    <div>　左<input type="text" readonly />度</div>
+                </div>
+                <div id="image" class="border">
+                    ロボットの画像表示
+                </div>
             </div>
             <div id="pump" class="border">
                 <div>ポンプ</div>
@@ -32,7 +39,7 @@
                 <div>　<textarea readonly></textarea></div>
             </div>
         </div>
-        <div id="active" class="canter">
+        <div id="active" class="center">
             <div id="contents" class="border">
                 <div id="title"></div>
                 <div id="controller">

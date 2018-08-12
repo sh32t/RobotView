@@ -10,7 +10,7 @@ $(function () {
     displayRobotButton();
 
     // selectで切り替え
-    $("#test_button").click(function (e) {
+    $("#select_button").click(function (e) {
         if (switchController === "robot") {
             $("#title").text("ポンプ");
             displayPumpBack();
@@ -22,8 +22,18 @@ $(function () {
             displayRobotButton();
             switchController = "robot";
         }
-
     });
+
+    // clientでクライアント起動
+    $("#client_button").click(function (e) {
+        ipcRenderer.send("client");
+    });
+
+    // serverでサーバー起動
+    $("#server_button").click(function (e) {
+        ipcRenderer.send("server");
+    });
+
 });
 
 var displayRobotBack = function(){
