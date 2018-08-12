@@ -42,21 +42,35 @@ app.on("window-all-closed", () => {
  **************************************/
 const { ipcMain } = require("electron")
 const child_process = require("child_process")
+const path = require("path");
+const fs = require("fs");
+const dateformat = require("dateformat");
+
 // 通信処理
 ipcMain.on("client", (event) => {
-    let proc = child_process.spawn("python", ["src/py/client.py"]);
+    let proc = child_process.spawn("python", [path.join(__dirname, "/py/client.py")]);
     proc.stdout.on("data", (data) => {
         console.log(data.toString());
         event.sender.send("client", data.toString());
     });
     proc.stderr.on("data", (data) => {
         console.log(data.toString());
+        event.sender.send("error", data.toString());
     });
 });
 
+var outputLogFile = function (data) {
+    let fileName = dateformat(new Date(), "yyyyMMdd_HHMMss");
+    fs.writeFile(path.join(__dirname, "/log/" + fileName), data, function (err) {
+        if (err) {
+            throw err;
+        }
+    });
+};
+
 // サーバー起動（テスト用）
 ipcMain.on("server", (event) => {
-    let proc = child_process.spawn("python", ["src/py/server.py"]);
+    let proc = child_process.spawn("python", [path.join(__dirname, "/py/server.py")]);
     proc.stdout.on("data", (data) => {
         console.log(data.toString());
     });

@@ -35,6 +35,11 @@ $(function () {
         displayStatus(json);
     });
 
+    // serverからデータを受信
+    ipcRenderer.on("error", (event, data) => {
+        displayError(data);
+    });
+
     // serverでサーバー起動（テスト用）
     $("#server_button").click(function (e) {
         ipcRenderer.send("server");
@@ -104,4 +109,8 @@ var displayStatus = function (json) {
     $("#tube_l").val(json.tube.l);
     $("#hz").val(json.pump);
     $("#msg").val(json.msg);
+}
+
+var displayError = function (errorMsg) {
+    $("#msg").val(errorMsg);
 }
