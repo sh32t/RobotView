@@ -17,7 +17,7 @@ let mainWindow;
 app.on("ready", () => {
 
     // ブラウザを作成
-    mainWindow = new BrowserWindow({ width: 1050, height: 540, useContentSize:true});
+    mainWindow = new BrowserWindow({ width: 1050, height: 540, useContentSize: true });
     // 初期表示でトップ画面を表示
     mainWindow.loadURL(`file://${__dirname}/index.html`);
 
@@ -47,12 +47,14 @@ ipcMain.on("client", (event) => {
     let proc = child_process.spawn("python", ["src/py/client.py"]);
     proc.stdout.on("data", (data) => {
         console.log(data.toString());
+        event.sender.send("client", data.toString());
     });
     proc.stderr.on("data", (data) => {
         console.log(data.toString());
     });
 });
 
+// サーバー起動（テスト用）
 ipcMain.on("server", (event) => {
     let proc = child_process.spawn("python", ["src/py/server.py"]);
     proc.stdout.on("data", (data) => {

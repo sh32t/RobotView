@@ -17,16 +17,16 @@
             <div id="robot" class="border">
                 <div id="parameter">
                     <div>速度</div>
-                    <div>　<input type="text" readonly />cm/s</div>
+                    <div>　<input type="text" id="speed" readonly />cm/s</div>
                     <div>タイヤ</div>
-                    <div>　右前輪<input type="text" readonly />度</div>
-                    <div>　左前輪<input type="text" readonly />度</div>
-                    <div>　右後輪<input type="text" readonly />度</div>
-                    <div>　左後輪<input type="text" readonly />度</div>
+                    <div>　右前輪<input type="text" id="wheel_fr" readonly />度</div>
+                    <div>　左前輪<input type="text" id="wheel_fl" readonly />度</div>
+                    <div>　右後輪<input type="text" id="wheel_br" readonly />度</div>
+                    <div>　左後輪<input type="text" id="wheel_bl" readonly />度</div>
 
                     <div>チューブ</div>
-                    <div>　右<input type="text" readonly />度</div>
-                    <div>　左<input type="text" readonly />度</div>
+                    <div>　右<input type="text" id="tube_r" readonly />度</div>
+                    <div>　左<input type="text" id="tube_l" readonly />度</div>
                 </div>
                 <div id="image" class="border">
                     ロボットの画像表示
@@ -34,9 +34,9 @@
             </div>
             <div id="pump" class="border">
                 <div>ポンプ</div>
-                <div>　<input type="text" readonly />Hz</div>
+                <div>　<input type="text" id="hz" readonly />Hz</div>
                 <div>メッセージ</div>
-                <div>　<textarea readonly></textarea></div>
+                <div>　<textarea  id="msg" readonly></textarea></div>
             </div>
         </div>
         <div id="active" class="center">
