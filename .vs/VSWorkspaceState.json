@@ -3,7 +3,9 @@
     "",
     "\\src",
     "\\src\\js",
-    "\\src\\log"
+    "\\src\\log",
+    "\\src\\py"
   ],
+  "SelectedNode": "\\src\\py\\server.py",
   "PreviewInSolutionExplorer": false
 }

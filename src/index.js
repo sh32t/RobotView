@@ -45,23 +45,29 @@ const child_process = require("child_process")
 const path = require("path");
 const fs = require("fs");
 const dateformat = require("dateformat");
+const jschardet = require("jschardet");
 
 // í êMèàóù
 ipcMain.on("client", (event) => {
     let proc = child_process.spawn("python", [path.join(__dirname, "/py/client.py")]);
+    var fileName = dateformat(new Date(), "yyyyMMdd_HHMMss");
     proc.stdout.on("data", (data) => {
         console.log(data.toString());
+        console.log(jschardet.detect(data.toString()));
+        outputLogFile(data.toString(), fileName);
         event.sender.send("client", data.toString());
     });
     proc.stderr.on("data", (data) => {
         console.log(data.toString());
+        outputLogFile(data.toString(), fileName);
         event.sender.send("error", data.toString());
     });
 });
 
-var outputLogFile = function (data) {
-    let fileName = dateformat(new Date(), "yyyyMMdd_HHMMss");
-    fs.writeFile(path.join(__dirname, "/log/" + fileName), data, function (err) {
+// ÉçÉOèoóÕ
+var outputLogFile = function (data, fileName) {
+    var logtime = dateformat(new Date(), "HH:MM:ss ");
+    fs.appendFile(path.join(__dirname, "/log/" + fileName), logtime + data, function (err) {
         if (err) {
             throw err;
         }

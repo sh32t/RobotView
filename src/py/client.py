@@ -5,7 +5,7 @@ import sys
 def setup_client():
     client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     client.connect(("localhost", 55000))
-    client.send(bytes("connect", encoding="utf-8"))
+    client.send("connect")
     return client 
 
 def check_connect(response):
@@ -23,7 +23,7 @@ def main():
         response = client.recv(4096)
         if response == "":
             break
-        output_receive(str(response, encoding="utf-8"))
+        output_receive(response)
 
 if __name__ == "__main__":
     main()

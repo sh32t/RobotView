@@ -37,7 +37,7 @@ def main():
         status["pump"] += 1
         status["msg"] = "connecting..."
         str_status = json.dumps(status)
-        clientsock.sendall(bytes(str_status, encoding="utf-8"))
+        clientsock.sendall(str_status)
         time.sleep(1)
 
     clientsock.close()
