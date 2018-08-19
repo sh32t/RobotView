@@ -1,0 +1,8 @@
+10:23:47 {"wheel": {"bl": 1, "fr": 1, "fl": 1, "br": 1}, "msg": "connecting...", "tube": {"r": 1, "l": 1}, "speed": 1, "pump": 1}
+10:23:48 {"wheel": {"bl": 2, "fr": 2, "fl": 2, "br": 2}, "msg": "connecting...", "tube": {"r": 2, "l": 2}, "speed": 2, "pump": 2}
+10:23:49 {"wheel": {"bl": 3, "fr": 3, "fl": 3, "br": 3}, "msg": "connecting...", "tube": {"r": 3, "l": 3}, "speed": 3, "pump": 3}
+10:23:50 {"wheel": {"bl": 4, "fr": 4, "fl": 4, "br": 4}, "msg": "connecting...", "tube": {"r": 4, "l": 4}, "speed": 4, "pump": 4}
+10:23:51 {"wheel": {"bl": 5, "fr": 5, "fl": 5, "br": 5}, "msg": "connecting...", "tube": {"r": 5, "l": 5}, "speed": 5, "pump": 5}
+10:23:52 {"wheel": {"bl": 6, "fr": 6, "fl": 6, "br": 6}, "msg": "connecting...", "tube": {"r": 6, "l": 6}, "speed": 6, "pump": 6}
+10:23:53 {"wheel": {"bl": 7, "fr": 7, "fl": 7, "br": 7}, "msg": "connecting...", "tube": {"r": 7, "l": 7}, "speed": 7, "pump": 7}
+10:23:54 {"wheel": {"bl": 8, "fr": 8, "fl": 8, "br": 8}, "msg": "connecting...", "tube": {"r": 8, "l": 8}, "speed": 8, "pump": 8}
