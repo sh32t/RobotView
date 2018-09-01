@@ -1,5 +1,5 @@
 {
-  "name": "robotview",
+  "name": "control-status-ui",
   "version": "1.0.0",
   "description": "ROSの状態を表示するツール",
   "main": "src/index.js",
@@ -7,8 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
-    "type": "git",
-    "url": "C:\\Users\\s.takubo\\source\\repos\\RobotView"
+    "type": "github",
+    "url": "https://github.com/Archileon/control-status-ui"
   },
   "author": "archileon",
   "license": "ISC",
