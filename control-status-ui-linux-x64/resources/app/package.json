@@ -1,0 +1,22 @@
+{
+  "name": "control-status-ui",
+  "version": "1.0.0",
+  "description": "ROSの状態を表示するツール",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/Archileon/control-status-ui"
+  },
+  "author": "archileon",
+  "license": "ISC",
+  "dependencies": {
+    "dateformat": "^3.0.3",
+    "jquery": "^3.3.1",
+    "jschardet": "^1.6.0",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.2"
+  }
+}
